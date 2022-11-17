@@ -1,5 +1,4 @@
 /*styling.css*/
-/*Style body by adding background image and set it to cover, add font-family*/
 body{
     font-family: Arvo, serif;
     background: url(http://freenaturestock.s3.amazonaws.com/232.jpg) no-repeat center center;
@@ -30,7 +29,6 @@ body{
     cursor: pointer;
 } 
 
-/*Style jumbotron*/
 .jumbotron{
     background-color: transparent;
     color: #fff;
@@ -40,11 +38,9 @@ body{
     letter-spacing: 2.5px;
 }
 
-/*limit the width of the icons section*/
 .container{
     max-width: 1000px;   
 }
-/*Style icons section using bootstrap grid system*/
 .bodyimage{
     height: 100px;   
 }
@@ -57,7 +53,6 @@ body{
 .icons p{
     font-size: 15px;   
 }
-/*Style contact button*/
 .contact{
     text-align: center;
     margin-top: 30px;
@@ -79,14 +74,12 @@ body{
     color: #fff;
     border: none;
 }
-/*Style footer*/
 .footer{
     background-color: rgba(0, 0, 0, 0.5); 
     color: grey;
     font-size: 15px;
     padding: 10px 0;
 }
-/*use media queries to change icons size in small devices*/
 @media (max-width: 768px){
     .bodyimage{
         height: 70px;   

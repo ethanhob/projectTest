@@ -1,28 +1,23 @@
 /*styling.css*/
-/*Add a cover background picture for the featured part with a fixed height*/
 .jumbotron{
     background: url(http://freenaturestock.s3.amazonaws.com/166.jpg);
     background-size: 100% 100%;
     height: 600px;
 }
 
-/*set the size of the logo*/
 .logo{
     width: 75px;
     height: 75px;
 }
 
-/*set text color of featured content*/
 .featured{
     color: #fff;   
 }
 
-/*create space between the title and the logo*/
 .featured h1{
     padding-top: 60px;   
 }
 
-/*style links*/
 .featured .btn-default{
     font-weight: bold;
     color: white;
@@ -38,14 +33,12 @@
     background-color: rgb(145, 82, 58);   
 }
 
-/*center align elements in the trial section and add padding*/
 .trial{
     text-align: center;
     padding: 20px 0 40px 0;
     color: black;
 }
 
-/*set size of images and add space between them*/
 .trial img{
     width: 200px;
     height: 70px;
@@ -58,7 +51,6 @@
     font-size: 15px;
     padding: 10px 0;
 }
-/*Add styling for devices between 480px and 768px*/
 @media (min-width: 480px) and (max-width: 768px){
     .jumbotron{
         height: 410px;
@@ -79,7 +71,6 @@
     }
 }
 
-/*Add styling for devices under 480px*/
 @media (max-width: 480px){
     .jumbotron{
         height: 410px;

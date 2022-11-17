@@ -7,7 +7,6 @@ var correctAnswer;
 
 //if we click on the start/reset
 document.getElementById("startreset").onclick = function(){
-    // onclick is js cliok is jquery
     
     //if we are playing
     
@@ -53,7 +52,6 @@ document.getElementById("startreset").onclick = function(){
 //Clicking on an answer box
 
 for(i=1; i<5; i++){
-    // 1,2,3,4 as the id of eachbox is box1, box2, box3, box4
     document.getElementById("box"+i).onclick = function(){
     //check if we are playing     
     if(playing == true){//yes
@@ -84,15 +82,6 @@ for(i=1; i<5; i++){
     }
 }   
 }
-//if we click on answer box
-    //if we are playing
-        //correct?
-            //yes
-                //increase score
-                //show correct box for 1sec
-                //generate new Q&A
-            //no
-                //show try again box for 1sec
 
 
 //functions

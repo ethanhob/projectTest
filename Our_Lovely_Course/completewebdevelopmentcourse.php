@@ -105,7 +105,7 @@ echo $resultMessage;
 <!--
             The action attribute references a PHP file "process_form.php" that receives the data entered into the form when user submit it by pressing the submit button.
 The method attribute tells the browser to send the form data through POST method.
-In real world you cannot trust the user inputs; you must implement some sort of validation to filter the user inputs before using them. In the next chapter you will learn how sanitize and validate this contact form data and send it through the email using PHP.
+In real world you cannot trust the user inputs; you must implement some sort of validation to filter the user inputs before using them. 
 -->
             <form action="completewebdevelopmentcourse.php" method="post">
                 <div class="form-group">
@@ -135,7 +135,6 @@ In real world you cannot trust the user inputs; you must implement some sort of 
 
 ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>

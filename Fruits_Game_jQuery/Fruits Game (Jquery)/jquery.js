@@ -19,10 +19,9 @@ $("#startreset").click(function(){
     }else{
 
         //we are not playing
-        playing = true; //game initiated
-
+        playing = true;
         //set score to 0
-        score = 0; //set score to 0
+        score = 0;
         $("#scorevalue").text(score);
 
         //show trials left 
@@ -46,15 +45,14 @@ $("#startreset").click(function(){
     
 $("#fruit1").mouseover(function(){
     score++;
-    $("#scorevalue").html(score); //update score
-//    document.getElementById("slicesound").play();
+    $("#scorevalue").html(score); 
     $("#slicesound")[0].play();//play sound
     
     //stop fruit
     clearInterval(action);
     
     //hide fruit
-    $("#fruit1").hide("explode", 500); //slice fruit
+    $("#fruit1").hide("explode", 500);
     
     //send new fruit
     setTimeout(startAction, 800);
@@ -66,8 +64,6 @@ $("#fruit1").mouseover(function(){
     
 function addHearts(){
     $("#trialsLeft").empty();
-    // so to add hearts you need to empty the box and then readd it every time it changes. Here it is a for loop where if you have three lives it appends three images because
-    //  trials left was set to 3 to the for loop loops three times, where i is 0,1,2. trialsleft only changes when fruit hits th ebottom of the screen.
     for(i = 0; i < trialsLeft; i++){
         $("#trialsLeft").append('<img src="images/heart.png" class="life">');
     }
@@ -79,19 +75,17 @@ function startAction(){
     
     //generate a fruit
     $("#fruit1").show();
-    chooseFruit(); //choose a random fruit
-    $("#fruit1").css({'left' : Math.round(550*Math.random()), 'top' : -50}); //random position
+    chooseFruit(); 
+    $("#fruit1").css({'left' : Math.round(550*Math.random()), 'top' : -50}); 
     
     //generate a random step
-    step = 1+ Math.round(10*Math.random()); // change step between 1 and 6 spaces
+    step = 1+ Math.round(10*Math.random()); // change step between 1 and 10 spaces
     
     // Move fruit down by one step every 10ms
     action = setInterval(function(){
         
-        //move fruit by one step - get posistion of the top and move it by one step
         $("#fruit1").css('top', $("#fruit1").position().top + step);                              
     
-        //check if the fruit is too low - absolute positioning starts at top left corner. so if the top is greater than the bottom of the container then you lose
         if($("#fruit1").position().top > $("#fruitsContainer").height()){
             //check if we have trials left
             if(trialsLeft > 1 ){
@@ -110,11 +104,10 @@ function startAction(){
                 addHearts();
                 
             }else{ // game over
-                playing = false; //we are not playing anymore
+                playing = false; 
                 $("#startreset").text("Start Game"); // change button to Start Game
                 $("#gameOver").show();
                 $("#gameOver").html('<p>Game Over!</p><p>Your score is '+ score +'</p>');
-                // this seems stupid. wouldnt you just create the html element in the html file?
                 $("#trialsLeft").hide();
                 stopAction();
             }
@@ -126,7 +119,6 @@ function startAction(){
 
 function chooseFruit(){
     $("#fruit1").attr('src' , 'images/' + fruits[Math.floor(5*Math.random())]+'.png');   
-    // fruits[Math.round(5*Math.random())] 
 }
 
 //Stop dropping fruits
